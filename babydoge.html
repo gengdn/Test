@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小飞飞</title>
+<link type="text/css" rel="stylesheet" href="renxi/default.css">
+<script type="text/javascript" src="renxi/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<div id="aa">
+ 
+</div>
+  <div id="bb">
+ 
+</div>
+<script>
+    </script>
+<script>
+    (function () {
+       var a;
+$.get(
+  'https://api.dex.guru/v1/tokens/0xc748673057861a797275cd8a068abb95a902e8de-bsc', 
+  function(html){
+  a = html;
+    $("#aa").html(a.priceUSD);
+
+  }
+);
+
+
+var b;
+$.get(
+  'https://avedex.cc/api/tokenHolder/bsc/getHolders/0xc748673057861a797275CD8A068AbB95A902e8de', 
+  function(html){
+    b=html;
+     $("#bb").html(b.holders);
+  }
+);
+
+alert(a.priceUSD+"|"+b.holders);
+
+      
+      )();
+    </script>
+
+
+</body>
+</html>
