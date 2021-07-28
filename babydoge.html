@@ -30,6 +30,9 @@
   <div id="bb" style="font-size:88px">
  
 </div>
+  <div id="cc" style="font-size:88px">
+ 
+</div>
  
  </div>
   <button type="button" onclick="location.reload();" class="button" >刷新</button>
@@ -54,6 +57,19 @@ $.get(
      $("#bb").html(b.holders);
   }
 );
+
+ 
+ $.get(
+  'https://bscscan.com/token/0xc748673057861a797275cd8a068abb95a902e8de?a=0xd193933337901aca93139fbeafe80dc23a9c392f', 
+  function(html){
+  var w = $("#ContentPlaceHolder1_divFilteredHolderBalance",a).get(0).innerText;
+  var j = w.split(/[\s\n]/)
+    $("#cc").html(j[2]);
+
+  }
+);
+
+
 
       
 
