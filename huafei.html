@@ -7,7 +7,7 @@
 <script type="text/javascript" src="renxi/jquery.min.js"></script>
  
  <script language="JavaScript">
- <!--
+  
  var caution = false
  function setCookie(name, value, expires, path, domain, secure) {
  var curCookie = name + "=" + escape(value) +((expires) ? "; expires=" + expires.toGMTString() : "") +((path) ? "; path=" + path : "") +((domain) ? "; domain=" + domain : "") +((secure) ? "; secure" : "")
@@ -38,7 +38,9 @@
  if (skew > 0)
  date.setTime(date.getTime() - skew)
  }
- var now = new Date()
+  
+  $(function(){
+    var now = new Date()
  fixDate(now)
  now.setTime(now.getTime() + 730 * 24 * 60 * 60 * 1000)
  var visits = getCookie("counter")
@@ -47,8 +49,10 @@
  else
  visits = parseInt(visits) + 1
  setCookie("counter", visits, now)
- document.write("<font size=6 color=red>欢迎您，您是第" + (678+visits) + " 个访问该站点的访客")
- // -->
+ document.write("<font size=6 color=red>欢迎您，您是第" + (789+visits) + " 个访问该站点的访客")
+    });
+ 
+
  </script>
 
 </head>
