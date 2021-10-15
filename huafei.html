@@ -46,8 +46,8 @@
  visits = 1
  else
  visits = parseInt(visits) + 1
- setCookie("counter", 678+visits, now)
- document.write("<font size=6 color=red>欢迎您，您是第" + visits + " 个访问该站点的访客")
+ setCookie("counter", visits, now)
+ document.write("<font size=6 color=red>欢迎您，您是第" + (678+visits) + " 个访问该站点的访客")
  // -->
  </script>
 
